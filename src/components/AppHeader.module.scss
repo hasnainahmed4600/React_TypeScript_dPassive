@@ -1,0 +1,61 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.header {
+  background: $header;
+  position: sticky;
+  top: 0;
+  z-index: $zindex-sticky;
+}
+
+@include mobile {
+  .header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .collapsed {
+    position: sticky;
+  }
+}
+
+.container {
+  @include flex(space-between);
+  padding: 0 $gutter/2;
+}
+
+.wrapper {
+  @include flex(space-between);
+}
+
+.logo {
+  @include flex;
+  height: $nav-height;
+}
+
+.badge {
+  margin-left: 8px;
+}
+
+.toggle {
+  @include flex;
+  padding-right: $gutter;
+}
+
+.support {
+  @include desktop {
+    @include flex;
+  }
+}
+
+.connect {
+  @include flex;
+  padding-left: 15px;
+}
+
+.hr {
+  margin: 0;
+}

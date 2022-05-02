@@ -1,0 +1,12 @@
+@import "../styles/mixins";
+
+#mirror {
+  @include app;
+}
+
+.nav-flex {
+  display: flex;
+  @include mobile {
+    flex-wrap: wrap;
+  }
+}
